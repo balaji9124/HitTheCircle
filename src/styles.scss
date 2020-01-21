@@ -1,0 +1,104 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+
+  #game-container{
+    padding: 20px;
+    max-width: 330px;
+    margin:auto;
+
+    .header{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      h4{
+        font-size: 14px;
+        margin: 13px 0px;
+      }
+      p{
+        align-self: flex-end;
+        justify-self: flex-end;
+        display: inline-flex;
+        align-items: center;
+        
+        .game-score{
+          border:1px solid #dadada;
+          width: 70px;
+          height: 20px;
+          margin-left: 5px;
+          text-align: left;
+          padding-left: 6px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .board{
+      border-top: 1px solid #dadada;
+      border-bottom: 1px solid #dadada;
+      padding:20px 0px;
+
+      .cells-container{
+        margin: auto;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 20px 20px 20px 20px 20px 20px;
+        grid-row-gap: 13px;
+        grid-column-gap: 13px;
+        justify-content: center;
+        align-content: center;
+
+        .cell {
+          width: 13px;
+          height: 13px;
+          border: 2px solid #dadada;
+          border-radius: 25px;
+          justify-self: center;
+          cursor: pointer;
+          background-color: #f4f6f8;
+
+          &.active{
+            background-color: #007ace;
+          }
+        }
+      }
+    }
+    .controls{
+      padding: 20px;
+
+      button{
+        font-size: 12px;
+        padding:5px 25px;
+        border: none;
+        cursor: pointer;
+        background-color: #007ace;
+        color: #fff;
+        
+        &:disabled{
+          background-color:#dfe7ed;
+          color: #000;
+        }
+      }
+      .play-btn{
+        margin-right: 15px;        
+        color: #fff;
+      }
+    }
+    .instructions{
+      text-align: left;
+      font-size: 13px;
+      max-width: 350px;
+
+      ol{
+        padding-left:14px;
+        margin-top:5px;
+
+        li{
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}

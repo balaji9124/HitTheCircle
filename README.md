@@ -1,2 +1,0 @@
-# HitTheCircle
-Created with CodeSandbox
